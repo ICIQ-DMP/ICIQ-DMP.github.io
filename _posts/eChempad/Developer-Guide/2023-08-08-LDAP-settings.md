@@ -64,3 +64,13 @@ cas.authn.ldap[0].enhanceWithEntryResolver=true
 cas.authn.ldap[0].useSsl=true
 cas.authn.ldap[0].principalAttributeList=mail,cn,givenName,sn
 ```
+
+###### Add CAS certificate into eChempad app
+```bash
+wget https://raw.githubusercontent.com/escline/InstallCert/master/InstallCert.java
+java --source 11 InstallCert.java echempad-cas.iciq.es:8443 changeit  # Press enter
+cp jssecacerts src/main/resources/security
+rm jssecacerts
+keytool -exportcert -alias echempad-cas.iciq.es-1 -keystore src/main/resources/security/jssecacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.cer
+sudo keytool -importcert -alias echempad-cas.iciq.es-1 -keystore ${JAVA_HOME}/lib/security/cacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.cer  ## type yes and press enter
+```
