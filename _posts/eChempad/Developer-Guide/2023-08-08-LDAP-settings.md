@@ -14,11 +14,11 @@ To configure LDAP we need to configure a CAS server. Anf before configuring a CA
 ### HTTPS config
 ###### Create new keystore with self-signed certificate
 ```bash
-keytool -genkey -alias eChempad -keyalg RSA -validity 999 -keystore src/main/resources/security/keystore -ext san=dns:eChempad.iciq.es
+keytool -genkey -alias eChempad -keyalg RSA -validity 999 -keystore src/main/resources/security/keystore -ext san=dns:echempad.iciq.es
 Enter keystore password:  
 Re-enter new password: 
 What is your first and last name?
-  [Unknown]:  eChempad
+  [Unknown]:  echempad
 What is the name of your organizational unit?
   [Unknown]:  TCC     
 What is the name of your organization?
@@ -71,6 +71,6 @@ wget https://raw.githubusercontent.com/escline/InstallCert/master/InstallCert.ja
 java --source 11 InstallCert.java echempad-cas.iciq.es:8443 changeit  # Press enter
 cp jssecacerts src/main/resources/security
 rm jssecacerts
-keytool -exportcert -alias echempad-cas.iciq.es-1 -keystore src/main/resources/security/jssecacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.cer
-sudo keytool -importcert -alias echempad-cas.iciq.es-1 -keystore ${JAVA_HOME}/lib/security/cacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.cer  ## type yes and press enter
+keytool -exportcert -alias echempad-cas.iciq.es-1 -keystore src/main/resources/security/jssecacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.crt
+sudo keytool -importcert -alias echempad-cas.iciq.es-1 -keystore ${JAVA_HOME}/lib/security/cacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.crt  ## type yes and press enter
 ```
