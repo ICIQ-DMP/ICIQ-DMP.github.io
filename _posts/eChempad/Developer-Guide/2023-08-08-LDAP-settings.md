@@ -74,3 +74,12 @@ rm jssecacerts
 keytool -exportcert -alias echempad-cas.iciq.es-1 -keystore src/main/resources/security/jssecacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.crt
 sudo keytool -importcert -alias echempad-cas.iciq.es-1 -keystore ${JAVA_HOME}/lib/security/cacerts -storepass changeit -file src/main/resources/security/echempad-cas.iciq.es.crt  ## type yes and press enter
 ```
+
+### Test LDAP server
+To test the LDAP server with queries and to see if it does answer us we need to install the `ldapsearch` binary package. In ubuntu we can do so by using the package manager like this:
+```shell
+sudo apt install -y ldap-utils
+```
+
+
+
