@@ -81,5 +81,26 @@ To test the LDAP server with queries and to see if it does answer us we need to 
 sudo apt install -y ldap-utils
 ```
 
+### TL;DR HTTPS certificates
+1- Get as many certificates you can from your application. Get them from the web, autogenerate them, whatever. 
+2- Put them inside the JVM that is going to run your apps. If you have more, then puto all certificates in each JVM
+3- If you have the typical information of the connection is not secure then probably you have done it wrong. 
 
 
+# LDAP config and testing
+There is the utility `ldapsearch` that you can use to easily send queries to a LDAP server. 
+
+Here I have written a prompt that makes a search to the LDAP query using my user `ldapechempad`. Ommitted the password for security (careful, the password will go to bash history):
+
+```shell
+ldapsearch -v -x -D "CN=ldapechempad,CN=users,dc=ICIQ,dc=ES" -w "LDAP_passwd" -b "CN=users,dc=ICIQ,dc=ES" -H ldap://iciqdc01.iciq.es:389 -s sub "(userPrincipalName=amarine@iciq.es)"
+```
+
+Notice that userPrincipalName is a property that users have, where they have written their full email direction. We will use this filter to select a single user.
+
+Also notice that it seems that LDAP does not make any distinction between uppercase and lowercase. 
+
+Here the same command using `ldapsearch` but getting the password from an external file, so it is not in the historial:
+```shell
+ldapsearch -v -x -D "CN=ldapechempad,CN=users,dc=ICIQ,dc=ES" -W -b "CN=users,dc=ICIQ,dc=ES" -H ldap://iciqdc01.iciq.es:389 -s sub "(userPrincipalName=amarine@iciq.es)" < secret.txt
+```
