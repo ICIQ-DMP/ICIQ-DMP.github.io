@@ -16,6 +16,9 @@ Here is a list of the folders and files contained inside the root of this projec
 - `.mvn/wrapper`: Contains the Maven downloader and the downloaded Maven binaries. The binaries (*.jar files) are
   ignored and can be safely deleted. The source files are used to retrieve the Maven binaries if not
   present. This Maven is multi-platform.
+- `.mvn/repo.maven.apache.org.cer`: Certificate that I added myself that is used in the maven wrapper class and is used
+  to be able to recognize the certificate of Apache, from where we are downloading the jar with the classes inside it.
+  If we do not have it sometimes the certificate recognition fails and `wget` only downloads an empty file.
 - `.run/`: Contains IntelliJ IDEA run configurations in XML format. Used by the IDE to retrieve execution options, so we
   do not have to configure each IDE that we are using.
 - `src/`: Contains the code and resources used to build the project.
