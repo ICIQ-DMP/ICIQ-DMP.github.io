@@ -163,3 +163,8 @@ to do in order to work with the project:
 - File -> project structure -> set language level to 1.8 (lambdas annotations..)
 - File -> Settings -> Plugins -> ZK framework
 - File -> Settings -> Plugins -> JPA buddy
+
+### Increase terminal buffer size
+Usually you will run out of space in the terminal screen. Use this in IDEA to increase the buffer of the terminal:
+
+open "File" => "Settings..." => "Editor" => "General" => "Console" activate "Override console cycle buffer size" from its default value of 1024kB to your needs.
