@@ -6,7 +6,7 @@ parent: iMarina
 has_children: true
 ---
 
-## iMarina-load (Developer guide)
+## 💻 iMarina-load (Developer guide)
 
 ### Prerequisites
 
@@ -49,7 +49,7 @@ sudo apt install python3.12-venv gcc build-essential git -y
 ```
 
 
-# Usage
+# 💡 Usage
 
 ### Obtaining translations excels
 By default, they are read from the `input/ folder` 
@@ -70,7 +70,7 @@ To start the program execute this command with argument --imarina-input:
 You can either Download them manually from [Sharepoint](https://iciq.sharepoint.com/sites/digitalitzacio), or you can use the Dockerized `OneDrive` service to sync files from Sharepoint
 to your host computer automatically in the background.
 
-### OneDrive service 
+### 💻 OneDrive service 
 The program will display a link and ask you to authenticate and paste the answered URL into the terminal.
 
 ```shell
@@ -88,17 +88,25 @@ instead of **input/**, so that data consumed by the program is always updated.
 
 You can leave OneDrive running so that the files are always in sync.
 
-### Docker basic info
+### 🐳 Docker basic info
 Access the container shell:
 ```shell
 
  docker-compose run --rm app sh
-
 ```
+
+### 🧪 Testing section
+
+All tests are managed using **pytest** and are located in the `tests/` directory.  
+The testing process ensures that all core functionalities work as expected before deployment.  
+For detailed testing setup, configuration, and automation through **Docker** or **GitHub Actions**, refer to the [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/) document.
+
 More technician info of Docker in section [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/)
 
 
-<!-- TODO TESTING SECTION AND PYTEST -->
+
+
+<!-- TODO IDE(pycharm) -->
 
 
 
