@@ -64,9 +64,7 @@ but you can change the location of these expected files with the following argum
 
 To start the program execute this command with argument --imarina-input:
 ```shell
-
 ./venv/bin/python src/main.py --step build --imarina-input ./input/iMarina.xlsx
-
 ```
 
 You can either Download them manually from [Sharepoint](https://iciq.sharepoint.com/sites/digitalitzacio), or you can use the Dockerized `OneDrive` service to sync files from Sharepoint
