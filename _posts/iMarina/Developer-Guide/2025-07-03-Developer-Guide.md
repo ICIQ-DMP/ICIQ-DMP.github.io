@@ -55,12 +55,12 @@ sudo apt install python3.12-venv gcc build-essential git -y
 By default, they are read from the `input/ folder` 
 but you can change the location of these expected files with the following arguments:
 
-
+```shell
 --imarina-input /path/to/iMarina.xlsx      
 --a3-input /path/to/A3.xlsx  
 --countries-dict /path/to/countries.xlsx    
 --jobs-dict /app/input/Job_Descriptions.xlsx
-
+```
 
 To start the program execute this command with argument --imarina-input:
 ```shell
