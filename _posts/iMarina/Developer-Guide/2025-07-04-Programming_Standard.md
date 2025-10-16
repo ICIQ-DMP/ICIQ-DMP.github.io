@@ -9,7 +9,7 @@ nav_order: 1
 
 
 
-# 🧭 Programming Standards for developers
+# 🧭 Programming Standard for developers
 
 This document defines the main tools and practices used in the iMarina-load project to ensure consistent development, testing, and deployment workflows.
 
@@ -107,9 +107,8 @@ secrets:
 ```
 
 
- 
-                   
-## 🧪 Testing
+
+## 🧪 Testing (pytest) 
 
 Automated testing is handled with **pytest** to ensure code reliability and prevent regressions.
 Pytest is the standard testing framework for Python and used for both unit and integration testing.
@@ -229,9 +228,95 @@ Stops test execution as soon as a test fails.
 Executes only tests matching the given name or keyword.
 
 
+## 🐳 Docker ➕ 🧪 Pytest
+
+Automated testing can also be executed inside a Docker container to ensure a consistent and isolated environment.
+Create two specific files are used for this purpose:
+- `test.Dockerfile`: defines the image used to run the tests.
+- `test-compose.yml`: orchestrates the test container and its dependencies.
 
 
 
+At `Dockerfile` the essential instructions:
+```dockerfile
+COPY ./pytest.ini /app
+# copies the pytest configuration (pytest.ini) into the container.
+
+ENV PYTHONPATH=/app
+# ensures Python recognizes the /app directory as the root module path.
+
+CMD ["pytest", "-v"]
+# script python to execute all tests when the container starts.
+```
+
+At `test-compose.yml` these are lines of the relevant configuration:
+
+```yaml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: test.Dockerfile
+    container_name: iMarina_test
+    volumes:
+    - ./input:/app/input
+    - ./output:/app/output
+    - ./uploads:/app/uploads
+```
+Into volumes mounts the source code and test directories into the container, allowing real-time access 
+to local files.
+
+
+### Example usage
+To build and run the test environment:
+```shell
+  docker-compose -f test-compose.yml up --build
+```
+
+##  ⚙️ Github actions (Test stage every push)
+The project uses **GitHub Actions** to automatically run tests every time code is pushed to the repository.
+A dedicated **test stage** ensures that all unit tests pass before the Docker image is built and deployed.
+
+### Workflow overview
+The workflow is defined in `.github/workflows/docker.yml` and includes the following steps:
+1. **Checkout** the repository code.  
+2. **Set up Python** and install dependencies from `requirements.txt`.  
+3. **Run pytest** to execute all tests (`pytest -v`).  
+4. Proceed to the **build stage** only if all tests pass successfully.
+
+Key lines in the `docker.yml`:
+```yaml
+
+      jobs:
+        test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: "3.11"
+
+
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+ 
+            - name: Run tests
+              run: PYTHONPATH=$PYTHONPATH:/home/runner/work/iMarina-load/iMarina-load pytest -v
+              # GitHub Actions runner’s workspace
+
+
+        build:
+          runs-on: ubuntu-latest
+          needs: test  #very important
+          steps:
+```
+These steps install all required dependencies and execute the test suite using pytest within the GitHub Actions runner workspace.
+The Docker image is built only if all tests pass successfully, ensuring code integrity and preventing deployment of unstable versions.
 
 
     
@@ -256,4 +341,4 @@ Executes only tests matching the given name or keyword.
 
 
 
-<!-- TODO Git branching model / * GitHub Actions (test stage)  / * IDE (PyCharm) -->
+<!-- TODO Git branching model  / * IDE (PyCharm) -->
