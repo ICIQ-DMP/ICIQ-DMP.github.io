@@ -325,6 +325,25 @@ These steps install all required dependencies and execute the test suite using p
 The Docker image is built only if all tests pass successfully, ensuring code integrity and preventing deployment of unstable versions.
 
 
+## 🧩 Git Branching Model
+The project follows a **two-branch Git model** to maintain a clean and reliable workflow.
+
+### 🪴 Branch Structure
+- **master** → contains production-ready code only.  
+- **develop** → main integration branch for all new development.  
+
+## ⚙️ Rules
+  - Successful **GitHub Actions** tests (for example in every push run the tests)
+  - Only `develop` can be merged into `master` after validation.  
 
 
-<!-- TODO Git branching model -->
+## 🧭 Good Practices
+- Keep branches focused on a single purpose.
+
+Only final changes are applied to the `master` branch. 
+
+In the `develop` branch, the necessary tests can be carried out without any problems. Before merging both branches, everything must be verified.
+
+- Synchronize with `develop` regularly to avoid conflicts.  
+
+<!-- TODO -->

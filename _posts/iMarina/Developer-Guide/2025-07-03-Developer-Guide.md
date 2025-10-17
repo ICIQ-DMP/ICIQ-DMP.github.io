@@ -145,12 +145,78 @@ All tests are managed using **pytest** and are located in the `tests/` directory
 The testing process ensures that all core functionalities work as expected before deployment.  
 For detailed testing setup, configuration, and automation through **Docker** or **GitHub Actions**, refer to the [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/) document.
 
+
+## 🧭 Git Branching Model
+
+The project uses a **two-branch model** based on Git best practices:
+
+- **master** → stable, production-ready branch  
+- **develop** → main branch for integrating and testing new features
+
+### 🌱 Workflow
+
+1. Pull the latest version of `develop`:
+```shell
+   git checkout develop
+   git pull origin develop
+```
+
+2. Create a new branch for your feature or fix:
+```shell
+ git checkout -b feature/my-feature
+```
+3. After finishing your changes:
+```shell
+ git add .
+ git commit -m "feat: add ......"
+```
+4. Push your branch to GitHub:
+```shell
+  git push --set-upstream origin feature/my-feature
+```
+5. Open a **Pull Request (PR)** (if necessary) on GitHub to merge into `develop`.
+6. Once tested and approved, `develop` can be merged into `master` for release.
+
+
+### 🛠️ Useful Commands
+
+- **List all branches**
+```shell
+   git branch -a
+```
+- **Switch between branches**
+```shell
+   git checkout branch_name   
+```
+
+- **Delete a local branch**
+```shell
+   git branch -d branch_name
+#or
+   git branch -D branch_name
+```
+- **Visualize branch history**
+```shell
+   gitk --all &
+```
+
+- **Discard local changes**
+```shell
+    git reset --hard
+```
+
+- **Update your branch with the latest develop**
+```shell
+   git pull origin develop --no-ff
+```
+
+
 More info in [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/)
 
 
 
 
-<!-- TODO git branching model -->
+<!-- TODO  -->
 
 
 
