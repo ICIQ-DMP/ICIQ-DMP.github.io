@@ -9,14 +9,11 @@ has_children: true
 ## 💻 iMarina-load (Developer guide)
 
 ### Prerequisites
-
 You need `Python 3.12.3` (or higher) version and git installed.
 To install them on Ubuntu, run this command:
 
 ```shell
-
-sudo apt install python3.12-venv gcc build-essential git -y
-
+ sudo apt install python3.12-venv gcc build-essential git -y
 ```
 
 ### Installation
@@ -37,7 +34,6 @@ sudo apt install python3.12-venv gcc build-essential git -y
 
 ```shell
  python3 -m venv venv
-
 ```
 
 3.Upgrade pip and install dependencies and requirements
@@ -45,11 +41,60 @@ sudo apt install python3.12-venv gcc build-essential git -y
 ```shell
  ./venv/bin/pip install --upgrade pip
  ./venv/bin/pip install -r requirements.txt
-
 ```
 
+## 💻🧑‍💻 IDE Setup — PyCharm
 
-# 💡 Usage
+### 🧩 1. Download and Install PyCharm
+You can install **PyCharm Community Edition** (free) or **Professional Edition** (paid).
+
+For manual installation on Linux using the `.tar.gz` package:
+
+```shell
+# Download the latest version from JetBrains community
+wget https://download.jetbrains.com/python/pycharm-community-2024.2.tar.gz
+```
+
+## Extract the file
+```shell
+ tar -xzf pycharm-community-2024.2.tar.gz
+```
+
+# Move to /opt (recommended for global access)
+
+```shell
+sudo mv pycharm-community-2024.2 /opt/pycharm
+```
+### 2. Create a Shortcut (Alias)
+
+To launch PyCharm quickly from any terminal, create an alias:
+```shell
+ echo "alias pycharm='/opt/pycharm/bin/pycharm.sh &'" >> ~/.bashrc
+ source ~/.bashrc
+```
+Now you can open it by simply typing:
+```shell
+ pycharm
+```
+The alias will remain available even after restarting your terminal.
+
+## 🌿 3. Clone the Project Repository (iMarina-load)
+
+```shell
+ cd /home/username/Desktop
+
+ git clone https://github.com/ICIQ-DMP/iMarina-load.git
+
+ cd iMarina-load
+```
+Then open the project directly in PyCharm:
+```shell
+ pycharm .
+ pycharm
+# all forms is correct
+```
+
+## 💡 iMarina-load Usage
 
 ### Obtaining translations excels
 By default, they are read from the `input/ folder` 
@@ -91,7 +136,6 @@ You can leave OneDrive running so that the files are always in sync.
 ### 🐳 Docker basic info
 Access the container shell:
 ```shell
-
  docker-compose run --rm app sh
 ```
 
@@ -101,12 +145,12 @@ All tests are managed using **pytest** and are located in the `tests/` directory
 The testing process ensures that all core functionalities work as expected before deployment.  
 For detailed testing setup, configuration, and automation through **Docker** or **GitHub Actions**, refer to the [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/) document.
 
-More technician info of Docker in section [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/)
+More info in [Programming standard](https://iciq-dmp.github.io/iMarina/Developer-Guide/Programming-standard/)
 
 
 
 
-<!-- TODO IDE(pycharm) -->
+<!-- TODO git branching model -->
 
 
 

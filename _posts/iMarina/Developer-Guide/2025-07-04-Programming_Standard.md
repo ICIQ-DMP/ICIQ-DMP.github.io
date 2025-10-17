@@ -13,6 +13,23 @@ nav_order: 1
 
 This document defines the main tools and practices used in the iMarina-load project to ensure consistent development, testing, and deployment workflows.
 
+## 💻 Integrated Development Environment (IDE)
+
+All development should be performed using [PyCharm](https://www.jetbrains.com/es-es/pycharm/download/?section=linux) (Community or Professional Edition).
+### 🧩 Standard Configuration
+
+- **IDE:** PyCharm  
+- **Interpreter:** Python 3.12 (configured via *Settings → Project → Python Interpreter*)
+- **Dependencies:** Must be installed from `requirements.txt`
+- **Code Style:** Follow PEP8 guidelines (PyCharm includes automatic linting and formatting support)  
+- **Version Control:** Integrated Git support in PyCharm is required for commits and branch management.  
+- **Tests:** Developers can run unit tests directly through PyCharm’s built-in `pytest` integration.  
+
+### ⚙️ Notes
+
+- PyCharm is globally installed under `/opt/pycharm`.  
+- Each developer must create a local alias (`pycharm`) for quick terminal access.
+
 
 ## 🐳 Docker 
 
@@ -23,7 +40,6 @@ Developers can use this command in bash to access the container shell for debugg
 ```shell
   docker-compose run --rm app sh
 ```
-
 
 Use the provided `Dockerfile` and `docker-compose.yml` to build and run the iMarina-load service in a containerized environment.  
 Build image  `docker compose up --build` to start the application with mounted input/output directories and configured secrets.
@@ -55,7 +71,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # script python for main
 CMD ["python", "/app/src/main.py", "--imarina-input", "/input/iMarina.xlsx", "--a3-input", "/input/A3.xlsx", "--countries-dict", "/input/countries.xlsx", "--jobs-dict", "/input/Job_Descriptions.xlsx"]
-
 ```
 
 ### A docker-compose contain this:
@@ -95,9 +110,7 @@ secrets:
     file: ./secrets/FTP_PORT
   FTP_USER:
     file: ./secrets/FTP_USER
-
 ```
-
 
 ### Useful Docker Commands
 
@@ -105,8 +118,6 @@ secrets:
 ```shell
    docker build -t yourtagname/imarina-load --progress=plain .
 ```
-
-
 
 ## 🧪 Testing (pytest) 
 
@@ -126,7 +137,6 @@ Tests can be executed locally with:
 
 Install the pytest library we will use to create and run the tests.
 ```shell
-
 pip install pytest
 ```
 
@@ -155,7 +165,6 @@ def test_is_visitor():
         end_date=date(2025, 10, 5),
         code_center=4)
     assert is_visitor(researcher) == True
-
 ```
 
 #### Pytest Usage and Configuration
@@ -188,10 +197,7 @@ Developers must execute all test commands from the project root directory to avo
 If necessary, the project root can be added to the PYTHONPATH manually:
 
 ```shell
-
-export PYTHONPATH=$PYTHONPATH:/home/<your_username>/Desktop/iMarina-load
-
-
+ export PYTHONPATH=$PYTHONPATH:/home/<your_username>/Desktop/iMarina-load
 ```
 
 
@@ -319,26 +325,6 @@ These steps install all required dependencies and execute the test suite using p
 The Docker image is built only if all tests pass successfully, ensuring code integrity and preventing deployment of unstable versions.
 
 
-    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- TODO Git branching model  / * IDE (PyCharm) -->
+<!-- TODO Git branching model -->
