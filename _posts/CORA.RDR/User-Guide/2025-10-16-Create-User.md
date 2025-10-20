@@ -51,7 +51,7 @@ created.
 ![img.png](../../../assets/images/CORA.RDR/dataverse-after-login.png)
 
 After creating it, you will need to do the actions described in 
-[the next article](https://iciq-dmp.github.io/CORA.RDR/User-Guide/Create-User) to 
+[the next article](https://iciq-dmp.github.io/CORA.RDR/User-Guide/Add-User-ICIQ-Dataverse) to 
 get your CORA.RDR account added into
 [ICIQ's Dataverse](https://dataverse.csuc.cat/dataverse/ICIQ) before using it.
 
