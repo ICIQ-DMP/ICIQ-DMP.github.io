@@ -15,7 +15,7 @@ You will be presented with a page similar to this:
 
 ![img.png](../../../assets/images/CORA.RDR/dataverse-main.png)
 
-You need to click on the "Log in" button on the right upper corner of the previous screen, which is is circled in red. 
+You need to click on the "Log in" button on the right upper corner of the previous screen, which is circled in red. 
 
 After clicking that button you will be presented with this screen:
 
