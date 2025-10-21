@@ -137,7 +137,7 @@ Tests can be executed locally with:
 
 Install the pytest library we will use to create and run the tests.
 ```shell
-pip install pytest
+ pip install pytest
 ```
 
 ### Test creation:   
@@ -345,5 +345,11 @@ Only final changes are applied to the `master` branch.
 In the `develop` branch, the necessary tests can be carried out without any problems. Before merging both branches, everything must be verified.
 
 - Synchronize with `develop` regularly to avoid conflicts.  
+
+- Always pull the latest changes before starting new work.  
+- Use clear and descriptive commit messages (example: `ADDED`, `TEST`, `FIX`)
+- Never commit **secrets**, **credentials**, or environment variables.  
+-  Review your changes locally before pushing (`git status`)
+- Prefer **Pull Requests** for all merges to ensure peer review and automated testing.  
 
 <!-- TODO -->
