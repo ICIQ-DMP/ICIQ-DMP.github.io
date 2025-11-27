@@ -49,10 +49,12 @@ To add a dataset you need to introduce two types of information:
 * **The metadata fields**: The data that describes your dataset, its author, affiliation, related web page... You need 
   to fill in *as many as possible* metadata fields with the information of the dataset. The explanation for each
   field can be found in the article [Dataset Fields](https://iciq-dmp.github.io/CORA.RDR/User-Guide/dataset-fields).
-* **The files**: The files that you want to add to this dataset. There are no limitations regarding format, but there 
+* **The files**: The files that you want to add to this dataset. Drag and drop your desired files or use the button 
+  "Select Files to Add" to upload your files. There are no limitations regarding format, but there 
   are some recommendations that you should follow. There is also a soft limit of 500 GB in a single dataset, but it can
   be bypassed by requesting it to the admins of CORA.RDR. The article 
-  [Dataset Files](https://iciq-dmp.github.io/CORA.RDR/User-Guide/dataset-files) 
+  [Dataset Files](https://iciq-dmp.github.io/CORA.RDR/User-Guide/dataset-files) explains all recommendation and 
+  guidelines regarding the upload of files to a dataset. 
 
 After you have introduced all the possible fields and your files in the dataset, you need to go to the bottom of the 
 page, where you will see a part of the page similar to the following, where you need to check the checkbox "I have read 
