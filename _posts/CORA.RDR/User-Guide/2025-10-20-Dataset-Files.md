@@ -40,15 +40,24 @@ It may be possible that when transforming this Excel file into a CSV file,
 the original Excel loses an important part of format of the Excel, affecting to the quality of the data. In this case 
 and others it may be reasonable to bypass the guidelines on the recommended file formats.
 
+Here is a revised version of your text with a clearer explanation of **DANS** and its relevance:
 
-## Preferred and Non-Preferred File Formats (DANS)
 
-Preferred formats are file formats that DANS – based on international agreements – is confident offer the best long-term 
-guarantees in terms of usability, accessibility, and sustainability. Deposits of research data in preferred formats 
-will **always** be accepted by DANS.
+## Preferred and Non-Preferred File Formats
 
-Non-preferred formats are widely used in addition to preferred formats and are expected to remain moderately to 
-reasonably usable, accessible, and robust in the long term.
+Preferred formats are file formats that **Data Archiving and Networked Services (DANS)**, the Dutch national centre of 
+expertise and repository for research data, recommends based on international standards and long-term digital 
+preservation practices.
+
+DANS is an institute of the Royal Netherlands Academy of Arts and Sciences (KNAW) and the Dutch Research Council (NWO). 
+It manages certified research data repositories and develops policies to ensure that research data remain accessible, 
+usable, and sustainable over time. Because of its national mandate and alignment with international agreements on 
+digital preservation, DANS defines which file formats offer the strongest long-term guarantees.
+
+Deposits of research data in preferred formats will **always** be accepted by DANS.
+
+Non-preferred formats are also widely used and may still be accepted; however, they are expected to remain only 
+moderately to reasonably usable, accessible, and robust in the long term compared to preferred formats.
 
 
 ## General Guidelines

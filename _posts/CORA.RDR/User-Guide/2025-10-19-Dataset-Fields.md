@@ -28,8 +28,8 @@ Here we will add information about each field in this section and what type of i
 ### Title *(required)*
 
 The **main title** of the dataset. It should be descriptive and consistent with related publications.
-If you’re uploading supplementary material for an article, use a clear title such as: `Replication data for “Catalytic 
-activation of CO₂ on Cu surfaces”`
+If you’re uploading supplementary material for an article, use a clear title such as: `Supporting Information for 
+“Catalytic activation of CO₂ on Cu surfaces”`
 **Tip:** Avoid abbreviations or internal references.
 
 Usually, if you are uploading the files for a supplementary materials of an article, the title of 
@@ -200,14 +200,23 @@ relation. For example: *My dataset* **is supplement to** *this reference*, *My d
 ### Notes
 
 Free-text field for **additional information** not covered elsewhere.
+
 Use it for:
 
-* Special acknowledgements.
+* Special acknowledgements (especially funding information).
 * Internal comments relevant to future reuse.
-* Description of some file structure not covered elsewhere
+* Description of file structures not covered elsewhere.
+
+We strongly recommend including **acknowledgements of funding bodies and project identifiers** (e.g. grant agreement 
+numbers). This information can be harvested by **OpenAIRE**, the European Open Science infrastructure that aggregates 
+research outputs linked to funded projects.
+
+Providing clear funding references facilitates the automatic inclusion of datasets in the official “outputs” of European
+and other funded projects, improving visibility, compliance with funder requirements, and traceability.
 
 **Example:**
 
+> This research was funded by the European Union under Grant Agreement No. XXXX (Project Acronym).
 > The data files include an additional folder with intermediate outputs not used in the final publication but relevant 
 > for reproducibility.
 
