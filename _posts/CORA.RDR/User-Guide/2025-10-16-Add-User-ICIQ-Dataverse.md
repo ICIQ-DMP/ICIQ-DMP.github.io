@@ -2,7 +2,7 @@
 layout: default
 title:  Add User ICIQ Dataverse
 permalink: /CORA.RDR/User-Guide/Add-User-ICIQ-Dataverse
-nav_order: 2
+nav_order: 20
 parent: User Guide
 grand_parent: CORA.RDR
 ---
@@ -24,9 +24,11 @@ group. Mark it if you are the group leader or the responsible to administer the 
 After the process is complete, you will receive an email confirming your membership to the subinstance of your research 
 group.  
 
-*You can now start uploading your datasets.*
-
 If you have any more problem, you can contact [digitalization@iciq.es](mailto:digitalization@iciq.es).
+
+After receiving the email, you can now start uploading your datasets by following 
+[the next article "Upload Datasets"](https://iciq-dmp.github.io/CORA.RDR/User-Guide/Create-User).
+
 
 
 

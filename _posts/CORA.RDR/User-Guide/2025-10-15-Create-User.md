@@ -2,7 +2,7 @@
 layout: default
 title:  Create User
 permalink: /CORA.RDR/User-Guide/Create-User
-nav_order: 1
+nav_order: 10
 parent: User Guide
 grand_parent: CORA.RDR
 ---
@@ -19,7 +19,7 @@ You need to click on the "Log in" button on the right upper corner of the previo
 
 After clicking that button you will be presented with this screen:
 
-![img.png](../../../assets/images/CORA.RDR/dataverse-login.png)
+![img.png](../../../assets/images/CORA.RDR/dataverse-signup.png)
 
 You need to click on the "Sign up for a Dataverse account." text in the center of the screen circled in red. 
 

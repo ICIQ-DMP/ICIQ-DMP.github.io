@@ -228,3 +228,64 @@ More info in [Programming standard](https://iciq-dmp.github.io/iMarina/Developer
 
 
 
+
+
+
+
+
+
+Additions from the readme of iMarina load
+---
+
+
+#### Initialize `PYTHONPATH`
+This initialization adds the project path to Python's module search path, so that it can find our tests.
+
+##### With `pytest.ini`
+To use the library correctly and find our tests, we must create the following file and place it in the same root 
+directory as `Desktop/iMarina-load`. If it is already present 
+
+Create the `pytest.ini` file with the following content if not present:
+
+``` ini
+[pytest]
+pythonpath = .
+```
+
+Pytest uses the `pytest.ini` file to define global settings.
+The option `pythonpath = .`
+tells pytest to add the project root folder (.) to `PYTHONPATH`.
+
+The test file must be in the project root (same folder as `src/` and `tests/`).
+
+
+##### With environment variable
+To ensure that Python sees the project root, you can manually add it to `PYTHONPATH` running this command:
+
+```shell
+export PYTHONPATH=$PYTHONPATH:/home/your_usersystem/Desktop/iMarina-load
+```
+
+---
+
+
+### Creating tests
+Test functions are written that begin with `test_`  in files with the same
+name.
+
+#### Test Folder
+Folder test for example `test_main.py`.
+
+All the tests that we implement must be stored in this folder called `tests`.
+
+#### Folder Location
+And the tests folder must be located in the **root directory** of your project:
+`Marina-load/tests.`
+
+In the file called `test_main.py`, you must first import the classes needed for the test
+For example:
+
+```python
+from src.main import Researcher, is_visitor
+```
+
