@@ -10,6 +10,10 @@ parent: iMarina
 ## iMarina-load (User guide)
 # Cómo generar automáticamente el excel UPLOAD
 
+
+![Video del tutorial](/assets/images/imarina/tutorial.mp4)
+
+
 > El objetivo de esta guía es mostrar los pasos para generar automáticamente el excel UPLOAD usando la automatización de iMarina. 
 
 **Prerequisitos:**
