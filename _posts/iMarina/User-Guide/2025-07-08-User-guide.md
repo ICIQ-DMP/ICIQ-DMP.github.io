@@ -8,11 +8,54 @@ parent: iMarina
 ---
 
 ## iMarina-load (User guide)
-# Cómo generar automáticamente el excel UPLOAD
+
+# TUTORIAL PASO A PASO
+
+**Pasos a seguir del tutorial:**
 
 
+1. Acceder al Sharepoint
+   * Primero de todo debes entrar al Sharepoint de `Digitalitzacio-Institutional Strengthening`.
+   * Abre la  carpeta del proyecto de iMarina `iMarina_load_automation`. 
+
+La carpeta principal del proyecto es `Input` : dentro se encuentran los archivos  Excels que necesitas procesar (A3, iMarina etc...). 
+En la carpeta `Output` una vez se ejecute con éxito el flujo automatico, estará el resultado final con el Excel de Upload.
+
+
+2.  Obtención de Links de los Excels A3 y iMarina
+
+> Antes de ir a rellenar el formulario debes copiar las rutas de los archivos Excel, tanto el de A3 como el de iMarina. 
+
+-Haz clic sobre el archivo de A3, busca en la barra superior el botón `Copy Link` y cópialo. 
+-Seguimos el mismo proceso con el archivo de iMarina.
+-Guarda los enlaces en el portapapeles ya que los necesitarás para más adelante. 
+
+
+3. Completar y enviar formulario 
+
+> Abre el enlace del formulario que has recibido y rellena los campos: 
+
+* `Title`: Escribe tu nombre completo. 
+
+* Campo `A3 Excel Link`: Pega el link que copiaste del archivo A3. (Este campo es obligatorio). 
+
+* Campo `iMarina Excel Link`: Pega el link correspondiente al archivo iMarina. 
+ 
+* `Observacions`: Dudas, comentarios, sugerencias que tengas. 
+
+
+4. Resultado esperado
+
+- Una vez has enviado el formulario correctamente, debes esperar unos minutos y entonces revisar tu correo electrónico y comprobar si te ha llegado un correo de <imarina@iciq.es>.
+ 
+    * Si el flujo se completa con éxito te llegará un correo con la ruta absoluta para encontrar el nuevo Excel Upload. 
+    * Si el flujo ha fallado te llegará otro correo, en este caso te comunicarán que ha habido un error en el flujo y que debes contactar con la unidad de digitalización <digitalitzacio@iciq.es>. 
+    
+ 
+    
 ![Video del tutorial](/assets/images/imarina/tutorial.mp4)
 
+# Cómo generar automáticamente el excel UPLOAD
 
 > El objetivo de esta guía es mostrar los pasos para generar automáticamente el excel UPLOAD usando la automatización de iMarina. 
 
