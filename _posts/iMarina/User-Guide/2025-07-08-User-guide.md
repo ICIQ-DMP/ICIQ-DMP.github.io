@@ -7,53 +7,66 @@ has_children: true
 parent: iMarina
 ---
 
-## iMarina-load (User guide)
+# iMarina-load (User guide)
 
-# TUTORIAL PASO A PASO
+---
 
-**Pasos a seguir del tutorial:**
+# Tutorial iMarina 
 
+El objetivo de este tutorial es mostrate paso a paso cómo usar la automatización de iMarina para generar el excel de upload.
 
-1. Acceder al Sharepoint
-   * Primero de todo debes entrar al Sharepoint de `Digitalitzacio-Institutional Strengthening`.
-   * Abre la  carpeta del proyecto de iMarina `iMarina_load_automation`. 
+Tienes disponible dos versiones del tutorial, en video y en texto.
 
-La carpeta principal del proyecto es `Input` : dentro se encuentran los archivos  Excels que necesitas procesar (A3, iMarina etc...). 
-En la carpeta `Output` una vez se ejecute con éxito el flujo automatico, estará el resultado final con el Excel de Upload.
+Aquí tienes el [video del tutorial](/assets/images/imarina/tutorial.mp4). A continuación tienes el tutorial en texto que seguirá los siguentes pasos:
 
+ - Paso 1 - Acceder al Sharepoint.
+ - Paso 2 - Obtención de Links de los Excels A3 y iMarina.
+ - Paso 3 - Completar y enviar formulario .
+ - Paso 4 - Resultado esperado.
 
-2.  Obtención de Links de los Excels A3 y iMarina
+## Paso 1 - Acceder al Sharepoint
 
-> Antes de ir a rellenar el formulario debes copiar las rutas de los archivos Excel, tanto el de A3 como el de iMarina. 
+Primero, debes entrar al Sharepoint de `Digitalitzacio-Institutional Strengthening` y abrir la carpeta del proyecto de iMarina `iMarina_load_automation`. 
 
--Haz clic sobre el archivo de A3, busca en la barra superior el botón `Copy Link` y cópialo. 
--Seguimos el mismo proceso con el archivo de iMarina.
--Guarda los enlaces en el portapapeles ya que los necesitarás para más adelante. 
+La carpeta principal del proyecto es `Input`, y dentro de ella se encuentran los archivos Excel que necesitas procesar (A3, iMarina etc...). En la carpeta `Output`, una vez se ejecute con éxito el flujo automatico, estará el resultado final con el Excel de Upload.
 
+## Paso 2 - Obtención de Links de los Excels A3 y iMarina
 
-3. Completar y enviar formulario 
+Antes de rellenar el formulario, debes copiar las rutas de los archivos Excel, tanto el de A3 como el de iMarina. 
 
-> Abre el enlace del formulario que has recibido y rellena los campos: 
+Para ello haz click sobre el archivo de A3 y busca en la barra superior el botón `Copy Link` y pulsa el botón para copiar la ruta. Sigue los mismos pasos con el archivo de iMarina. Guarda los enlaces en el portapapeles ya que los necesitarás para más adelante. 
 
-* `Title`: Escribe tu nombre completo. 
+## Paso 3 - Completar y enviar formulario 
 
-* Campo `A3 Excel Link`: Pega el link que copiaste del archivo A3. (Este campo es obligatorio). 
+Abre el enlace del formulario que has recibido y rellena los siguientes campos.
 
-* Campo `iMarina Excel Link`: Pega el link correspondiente al archivo iMarina. 
+  - `Title`. 
+    Escribe tu nombre completo. 
+  
+  - `A3 Excel Link`.
+    Pega el link que copiaste del archivo A3. (Este campo es obligatorio). 
+   
+  - `iMarina Excel Link`.
+    Pega el link correspondiente al archivo iMarina. 
+   
+  - `Observacions`.
+    Dudas, comentarios, sugerencias que tengas. 
+
+Una vez rellenado el formulario, pulsa el botón de enviar.
+
+## Paso 4 - Resultado esperado
+
+Una vez has enviado el formulario correctamente, debes esperar unos minutos y entonces revisar tu correo electrónico y comprobar si te ha llegado un correo de <imarina@iciq.es>.
  
-* `Observacions`: Dudas, comentarios, sugerencias que tengas. 
+Si el flujo se completa con éxito te llegará un correo con la ruta absoluta para encontrar el nuevo Excel Upload. 
 
+Si el flujo ha fallado te llegará otro correo, en este caso te comunicarán que ha habido un error en el flujo y que debes contactar con la unidad de digitalización <digitalitzacio@iciq.es>. 
 
-4. Resultado esperado
+## Cierre
 
-- Una vez has enviado el formulario correctamente, debes esperar unos minutos y entonces revisar tu correo electrónico y comprobar si te ha llegado un correo de <imarina@iciq.es>.
- 
-    * Si el flujo se completa con éxito te llegará un correo con la ruta absoluta para encontrar el nuevo Excel Upload. 
-    * Si el flujo ha fallado te llegará otro correo, en este caso te comunicarán que ha habido un error en el flujo y que debes contactar con la unidad de digitalización <digitalitzacio@iciq.es>. 
-    
- 
-    
-![Video del tutorial](/assets/images/imarina/tutorial.mp4)
+Este es el final del tutorial de iMarina. El tutorial está enfocado para formar a un usuario nuevo desde cero. Ahora que lo has completado, te será más conveniente utilizar la guía práctica y las referencias para usar eficientemente esta automatización.
+
+---
 
 # Cómo generar automáticamente el excel UPLOAD
 
@@ -86,6 +99,7 @@ En la carpeta `Output` una vez se ejecute con éxito el flujo automatico, estar�
 **Nota:** El emisor del correo será <imarina@iciq.es> y <digitalitzacio@iciq.es> el correo operativo del departamento para resolver posibles incidencias con el workflow.
 
 
+---
 
 
 # Formulario de generación automática del excel Upload iMarina
@@ -123,24 +137,5 @@ El campo de `Observaciones` puede ser rellenado libremente con dudas, comentario
 
 **Ejemplo:** "El excel de A3 no está actualizado a este mes."
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- TODO -->
+---
 
