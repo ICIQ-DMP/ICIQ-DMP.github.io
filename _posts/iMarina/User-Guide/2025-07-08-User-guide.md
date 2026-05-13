@@ -13,7 +13,7 @@ parent: iMarina
 
 # Tutorial iMarina 
 
-El objetivo de este tutorial es mostrate paso a paso cómo usar la automatización de iMarina para generar el excel de upload.
+El objetivo de este tutorial es mostrarte paso a paso cómo usar la automatización de iMarina para generar el excel de upload.
 
 Tienes disponible dos versiones del tutorial, en video y en texto.
 
