@@ -26,7 +26,8 @@ Para instalar ambas tecnologías puedes hacerlo ejecutando el siguiente comando 
 
 ### INSTALACIÓN DEL PROYECTO
 Debes entrar al [GitHub del ICIQ](https://github.com/ICIQ-DMP), en la pestaña donde están todos los repositorios y entrar en el que pone `imarina` (es el proyecto en el que trabajarás). 
-1. Clonar repositorio de iMarina
+
+**Clonar repositorio de iMarina**
 * Una vez que entres al repo puedes copiar el link para poder clonar el repositorio con este comando: 
 
 ```shell
@@ -37,20 +38,19 @@ Para entrar en la carpeta del proyecto debes ejecutar el comando:
  cd imarina
 ```
 
-2. Inicializar el entorno virtual (venv)
+**Inicializar el entorno virtual (venv)**
 
-Para inicializarlo puedes hacerlo con el siguiente comando: 
+* Para inicializarlo puedes hacerlo con el siguiente comando: 
 
 ```shell
   python3 -m venv venv
 ```
 
+**Actualizar pip y instalar dependencias y requisitos principales del proyecto**
 
-3. Actualizar pip y instalar dependencias y requisitos principales del proyecto 
-
-- Para ahora si poner en marcha el proyecto debes actualizar el pip.
- El pip es el gestor de paquetes de Python. 
-- Con el siguiente comando actualizas el pip: 
+* Para ahora si poner en marcha el proyecto debes actualizar el pip.
+ * El pip es el gestor de paquetes de Python. 
+* Con el siguiente comando actualizas el pip: 
 
 ```shell
   ./venv/bin/pip install --upgrade pip
