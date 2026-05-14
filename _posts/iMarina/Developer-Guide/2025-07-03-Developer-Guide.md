@@ -10,61 +10,6 @@ has_children: true
    
 <!-- TODO -->
 
-## 💻🧑‍💻 IDE Setup —  PyCharm 
-
-### 🧩 1. Descargar e instalar el IDE
-El IDE que te recomiendo descargar es **Pycharm** ya que creo que es la mejor opción para trabajar con Python y tiene muchas herramientas y plugins interesantes (sobretodo de leer Excels). 
-
-- Versiones Disponibles : 
-
-  **PyCharm Community Edition (versión free)**
-  **o Professional Edition (pago)**
-
-
-TIENES 2 OPCIONES DE DESCARGAR EL IDE:
-* WEB
-* TERMINAL
-
-Descargalo aqui desde la propia web de Pycharm:
-[IDE](https://www.jetbrains.com/pycharm/download/?section=linux)
-También puedes descargarlo por terminal: 
-
-```shell
-#   Descarga la última version de JetBrains Community(o la que desees)
-    wget https://download.jetbrains.com/python/pycharm-community-2024.2.tar.gz
-```
-Como vas a descargar la versión para Linux se te descargará un paquete `.tar.gz`  
-
-## PASOS A SEGUIR PARA DESCOMPRIMIR EL ARCHIVO EN TERMINAL LINUX: 
-
-### 1. Extrae el archivo .tar
-```shell
- tar -xzf pycharm-community-2024.2.tar.gz
-```
-
-### 2. Mover el archivo a la carpeta  /opt (carpeta recomendada pero puede ser otra)
-
-Comando mv para mover:
-```shell
-  sudo mv pycharm-community-2024.2 /opt/pycharm
-```
-### 3. Crear un Shortcut (Alias)
-
-Para ejecutar rápidamente el programa desde cualquier terminal, con el siguiente comando creamos un alias:
-
-```shell
-# como recomendación llama al alias pycharm para que no sea complicado y sea fácil de recordar
-  echo "alias pycharm='/opt/pycharm/bin/pycharm.sh &'" >> ~/.bashrc
-  source ~/.bashrc
-```
-Una vez ejecutado este comando cierra la terminal y vuelve a abrirla de nuevo.
-Ahora ya tendrás disponible tu nuevo alias, simplemente poniendo el nombre del alias en tu terminal se ejecutará el IDE:
-
-```shell
-  pycharm
-```
-
-
 
 ## 🌿 3. Clone the Project Repository (iMarina-load)
 
