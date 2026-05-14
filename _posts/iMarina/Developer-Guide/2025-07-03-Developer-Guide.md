@@ -6,65 +6,8 @@ parent: iMarina
 has_children: true
 ---
 
-## 💻 iMarina-load (Developer guide)
-
-# GUIA DE INSTALACIÓN PARA DESARROLLADORES
-
-## PRERREQUISITOS
-
-> Antes de empezar con el proyecto de iMarina debes tener en cuenta los siguientes prerrequisitos.
-
-### TECNOLOGÍAS: 
-Para tener el entorno de desarrollo a punto necesitas instalar la versión de Python `3.12.3` (o superior) y también git
-instalado en tu maquina.
-
-Para instalar ambas tecnologías puedes hacerlo ejecutando el siguiente comando en tu terminal de Linux:
-```shell
-  sudo apt install python3.12-venv gcc build-essential git -y
-```
-
-
-### INSTALACIÓN DEL PROYECTO
-Debes entrar al [GitHub del ICIQ](https://github.com/ICIQ-DMP), en la pestaña donde están todos los repositorios y entrar en el que pone `imarina` (es el proyecto en el que trabajarás). 
-
-**Clonar repositorio de iMarina**
-* Una vez que entres al repo puedes copiar el link para poder clonar el repositorio con este comando: 
-
-```shell
-  git clone https://github.com/ICIQ-DMP/imarina.git 
-```
-Para entrar en la carpeta del proyecto debes ejecutar el comando:
-```shell
- cd imarina
-```
-
-**Inicializar el entorno virtual (venv)**
-
-* Para inicializarlo puedes hacerlo con el siguiente comando: 
-
-```shell
-  python3 -m venv venv
-```
-
-**Actualizar pip y instalar dependencias y requisitos principales del proyecto**
-
-* Para ahora si poner en marcha el proyecto debes actualizar el pip.
- * El pip es el gestor de paquetes de Python. 
-* Con el siguiente comando actualizas el pip: 
-
-```shell
-  ./venv/bin/pip install --upgrade pip
-```
-
-- También debes instalar los requisitos necesarios para que el proyecto funcione correctamente. 
-- Comando necesario:
-```shell
-  ./venv/bin/pip install -r requirements.txt
-```
-
-Algunas dependencias como  `paramiko`, `pandas`, `openpyxl` son necesarias ya que en este proyecto trabajarás con el lenguaje de Python y  con archivos Excels. 
-
-
+  - [Guía de instalación](/iMarina/Developer-Guide/How-To-Install)
+   
 <!-- TODO -->
 
 ## 💻🧑‍💻 IDE Setup —  PyCharm 
