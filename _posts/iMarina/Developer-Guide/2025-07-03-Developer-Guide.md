@@ -7,9 +7,9 @@ has_children: true
 ---
 
   - [Guía de instalación](/iMarina/Developer-Guide/How-To-Install)
+  - [Guía de configuración de PyCharm](/iMarina/Developer-Guide/How-To-Install)
    
 <!-- TODO -->
-
 
 ## 🌿 3. Clone the Project Repository (iMarina-load)
 
