@@ -8,29 +8,16 @@ has_children: true
 
   - [Guía de instalación](/iMarina/Developer-Guide/How-To-Install)
   - [Guía de configuración de PyCharm](/iMarina/Developer-Guide/How-To-Setup-PyCharm)
+  - [Guía de uso de iMarina](/iMarina/Developer-Guide/How-To-Usage-iMarina)
+  - [Reference](/iMarina/Developer-Guide/Reference)  
+
    
 <!-- TODO -->
 
-## 🌿 3. Clone the Project Repository (iMarina-load)
 
-```shell
- cd /home/username/Desktop
 
- git clone https://github.com/ICIQ-DMP/iMarina-load.git
 
- cd iMarina-load
-```
-Then open the project directly in PyCharm:
-```shell
- pycharm .
- pycharm
-# all forms is correct
-```
-
-## 💡 iMarina-load Usage
-
-### Obtaining translations excels
-By default, they are read from the `input/ folder` 
+### Obtaining translations excels 
 but you can change the location of these expected files with the following arguments:
 
 ```shell
