@@ -7,8 +7,8 @@ has_children: true
 parent: iMarina
 ---
 
-# iMarina-load (User guide)
-
+# iMarina User Docs 
+ 
   - [Tutorial](/iMarina/User-Guide/Tutorial)  
     If it is your first time using this automatization, do this tutorial.
   
@@ -17,3 +17,6 @@ parent: iMarina
   
   - [Reference](/iMarina/User-Guide/Reference)  
     Use this reference to quickly know the specifications of the form. 
+
+---
+
