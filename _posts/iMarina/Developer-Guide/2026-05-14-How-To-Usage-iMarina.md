@@ -10,6 +10,7 @@ parent: Developer Guide
 El objetivo de esta guía es mostrar como se usa correctamente iMarina.
 
 ## Obtención traducción de los Excels
+
 Por defecto se leen estos Excels  desde la carpeta `input/ folder` pero puedes cambiar la ubicación de estos archivos utilizando los siguientes argumentos.
 
 ```shell
@@ -24,10 +25,9 @@ Puedes descargar manualmente los Excels necesarios desde el [Sharepoint(carpeta 
 También puedes utilizar el `OneDrive` en el contenedor de  **Docker** para sincronizar los archivos del SharePoint en tu máquina de forma automática en segundo plano.
 
 ## Ejecutar main
+
 Para iniciar el programa **main** debes ejecutar el siguiente comando con el argumento `--imarina-input`
 
 ```shell
    ./venv/bin/python -m imarina --step build --imarina-input ./input/iMarina.xlsx
 ```
-
-<!-- TODO-->
